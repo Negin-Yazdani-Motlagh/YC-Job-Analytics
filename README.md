@@ -53,3 +53,20 @@
 - Contains structured data with fields: title, url (direct post URL), and source_url (page from which the post was extracted).
 - Serves as the output of the Extract_who_is_hiring_posts.py script.
 - Enables easy access to filtered "Who is Hiring" posts for analysis or archiving.
+
+### `HTML_content.html`
+***Purpose**: To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
+
+**Key Functionality**:
+- Script name:`fetch_html_who_is_hiring.py`
+- Contains the title, URL, and file path of each post's HTML content.
+- Links each entry to its corresponding saved .html file.
+- Stores the raw HTML content of each post for quick access without needing to open the .html files.
+
+### `HTML_Content_Data.json`
+***Purpose**:To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
+
+**Key Functionality**:
+- Script name:`fetch_html_who_is_hiring.py`
+- Contains the title, URL, and file path of each post's HTML content.
+- Links each entry to its corresponding saved .html file.
