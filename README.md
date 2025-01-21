@@ -22,9 +22,16 @@
 - Saves the extracted data to a new JSON file.
 
 
-### ``
-***Purpose**
+### `fetch_html_who_is_hiring.py`
+***Purpose**:To fetch and save the HTML content of "Who is Hiring" posts specified in a JSON file (Who_Is_Hiring_Posts.json). Each post's content is stored as an individual HTML file in the HTML_Content directory for offline use, analysis, or archival. Additionally, the metadata and HTML content are consolidated into a JSON file (HTML_Content_Data.json) for further processing.
+
 **Key Functionality**:
+- Input file: Who_Is_Hiring_Posts.json. Output Files: HTML_Content. All individual HTML files are saved in this directory and Consolidated JSON File: File Name: HTML_Content_Data.json which is a single JSON file consolidating metadata, including titles, URLs, paths to saved HTML files, and optional HTML content. Script Name: fetch_html_who_is_hiring.py  
+- Reads a JSON file (Who_Is_Hiring_Posts.json) containing: title: The title of the post. url: The URL to fetch HTML content from.
+- Fetches HTML content for each post using HTTP requests with retry and exponential backoff mechanisms.
+- Saves the HTML content as:
+- Individual .html files in the HTML_Content directory, named based on sanitized post titles.
+- A consolidated JSON file (HTML_Content_Data.json) containing metadata and file paths for all fetched posts.
 
 
 # result
