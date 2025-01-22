@@ -33,6 +33,16 @@
 - Individual .html files in the HTML_Content directory, named based on sanitized post titles.
 - A consolidated JSON file (HTML_Content_Data.json) containing metadata and file paths for all fetched posts.
 
+### `parse_and_extract_posts.py`
+***Purpose**:This script processes HTML files containing "Who is Hiring" posts, parses the content to analyze its structure, and extracts top-level job posts while organizing them into a nested JSON structure for further analysis or storage.
+
+**Key Functionality**:
+- output file:Nested_Job_Posts.json. Input file:HTML_Content/HTML_Content, Contains monthly HTML files representing "Who is Hiring" posts. Each file is named by month (e.g., 2025-01.html) and includes nested comments. script:parse_and_extract_posts.py
+- Reads HTML files from the folder: C:/Users/negin/HTML_Content/HTML_Content.
+- Uses BeautifulSoup to parse the HTML structure.
+- Identifies and extracts top-level comments (job posts) by checking indentation levels.
+- Organizes extracted data into a nested JSON format with the following structure: Month: Key representing the file name (e.g., "2025-01").comments: List of extracted top-level job posts. numJobPost: Count of extracted job posts for the month.
+- Saves the structured data in a JSON file
 
 # result
 
@@ -70,3 +80,12 @@
 - Script name:`fetch_html_who_is_hiring.py`
 - Contains the title, URL, and file path of each post's HTML content.
 - Links each entry to its corresponding saved .html file.
+
+### `nested_comments.json` NOT AVAILBLE 
+***Purpose**: Stores the parsed data from monthly HTML files of "Who is Hiring" posts, keeping only top-level job posts and removing replies for further analysis.
+**Key Functionality**:
+- Scripts: `parse_and_extract_posts.py`
+- Organizes job post data into a structured JSON format.
+- Stores parsed comments from each HTML file under the respective month key.
+- Includes metadata such as the number of job posts (numJobPost) for each month.
+- Provides a cleaned dataset for additional analysis or reporting.
