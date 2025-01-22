@@ -23,7 +23,7 @@
 
 
 ### `fetch_html_who_is_hiring.py`
-***Purpose**:To fetch and save the HTML content of "Who is Hiring" posts specified in a JSON file (Who_Is_Hiring_Posts.json). Each post's content is stored as an individual HTML file in the HTML_Content directory for offline use, analysis, or archival. Additionally, the metadata and HTML content are consolidated into a JSON file (HTML_Content_Data.json) for further processing.
+**Purpose**:To fetch and save the HTML content of "Who is Hiring" posts specified in a JSON file (Who_Is_Hiring_Posts.json). Each post's content is stored as an individual HTML file in the HTML_Content directory for offline use, analysis, or archival. Additionally, the metadata and HTML content are consolidated into a JSON file (HTML_Content_Data.json) for further processing.
 
 **Key Functionality**:
 - Input file: Who_Is_Hiring_Posts.json. Output Files: HTML_Content. All individual HTML files are saved in this directory and Consolidated JSON File: File Name: HTML_Content_Data.json which is a single JSON file consolidating metadata, including titles, URLs, paths to saved HTML files, and optional HTML content. Script Name: fetch_html_who_is_hiring.py  
@@ -34,7 +34,7 @@
 - A consolidated JSON file (HTML_Content_Data.json) containing metadata and file paths for all fetched posts.
 
 ### `parse_and_extract_posts.py`
-***Purpose**:This script processes HTML files containing "Who is Hiring" posts, parses the content to analyze its structure, and extracts top-level job posts while organizing them into a nested JSON structure for further analysis or storage.
+**Purpose**:This script processes HTML files containing "Who is Hiring" posts, parses the content to analyze its structure, and extracts top-level job posts while organizing them into a nested JSON structure for further analysis or storage.
 
 **Key Functionality**:
 - output file:Nested_Job_Posts.json. Input file:HTML_Content/HTML_Content, Contains monthly HTML files representing "Who is Hiring" posts. Each file is named by month (e.g., 2025-01.html) and includes nested comments. 
@@ -45,7 +45,7 @@
 - Saves the structured data in a JSON file
   
 ### `count_job_posts.py`
-***Purpose**:To extract the number of job posts and their associated dates from the processed HTML files or JSON structure, summarizing the job post count by date for analysis or visualization.
+**Purpose**:To extract the number of job posts and their associated dates from the processed HTML files or JSON structure, summarizing the job post count by date for analysis or visualization.
 
 **Key Functionality**:
 - output:job_post_counts.json. Input:HTML content
@@ -66,7 +66,7 @@
 - be used to troubleshoot network issues or analyze the structure of the retrieved web pages.
 
 ### `Who_Is_Hiring_Posts.json`
-***Purpose**:To store the extracted data of "Who is Hiring" posts, including their titles, direct URLs, and source page URLs, from the processed HTML content.
+**Purpose**:To store the extracted data of "Who is Hiring" posts, including their titles, direct URLs, and source page URLs, from the processed HTML content.
 
 **Key Functionality**:
 - This result has been driven from the code called "Extract_who_is_hiring.py"
@@ -75,7 +75,7 @@
 - Enables easy access to filtered "Who is Hiring" posts for analysis or archiving.
 
 ### `HTML_content.html` NOT AVAILBLE 
-***Purpose**: To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
+**Purpose**: To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
 
 **Key Functionality**:
 - Script name:`fetch_html_who_is_hiring.py`
@@ -84,7 +84,7 @@
 - Stores the raw HTML content of each post for quick access without needing to open the .html files.
 
 ### `HTML_Content_Data.json` NOT AVAILBLE 
-***Purpose**:To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
+**Purpose**:To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
 
 **Key Functionality**:
 - Script name:`fetch_html_who_is_hiring.py`
@@ -92,7 +92,7 @@
 - Links each entry to its corresponding saved .html file.
 
 ### `nested_comments.json` NOT AVAILBLE 
-***Purpose**: Stores the parsed data from monthly HTML files of "Who is Hiring" posts, keeping only top-level job posts and removing replies for further analysis.
+**Purpose**: Stores the parsed data from monthly HTML files of "Who is Hiring" posts, keeping only top-level job posts and removing replies for further analysis.
 **Key Functionality**:
 - Scripts: `parse_and_extract_posts.py`
 - Organizes job post data into a structured JSON format.
@@ -101,7 +101,7 @@
 - Provides a cleaned dataset for additional analysis or reporting.
 
 ### `job_post_counts.json`
-***Purpose**:To provide a simplified summary of the number of job posts for each date extracted from the HTML_content file. This file is essential for quick analysis and visualization of job post trends over time.
+**Purpose**:To provide a simplified summary of the number of job posts for each date extracted from the HTML_content file. This file is essential for quick analysis and visualization of job post trends over time.
 
 **Key Functionality**:
 - output:job_post_counts.json. Input:HTML content. script:count_job_posts.py
