@@ -54,7 +54,7 @@
 - Serves as the output of the Extract_who_is_hiring_posts.py script.
 - Enables easy access to filtered "Who is Hiring" posts for analysis or archiving.
 
-### `HTML_content.html`
+### `HTML_content.html` NOT AVAILBLE 
 ***Purpose**: To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
 
 **Key Functionality**:
@@ -63,7 +63,7 @@
 - Links each entry to its corresponding saved .html file.
 - Stores the raw HTML content of each post for quick access without needing to open the .html files.
 
-### `HTML_Content_Data.json`
+### `HTML_Content_Data.json` NOT AVAILBLE 
 ***Purpose**:To consolidate and store metadata and file paths for the HTML content of "Who is Hiring" posts fetched from their respective URLs. This file serves as a centralized reference for analysis, verification, and further processing.
 
 **Key Functionality**:
