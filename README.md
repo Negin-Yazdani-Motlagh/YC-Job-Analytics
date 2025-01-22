@@ -37,12 +37,22 @@
 ***Purpose**:This script processes HTML files containing "Who is Hiring" posts, parses the content to analyze its structure, and extracts top-level job posts while organizing them into a nested JSON structure for further analysis or storage.
 
 **Key Functionality**:
-- output file:Nested_Job_Posts.json. Input file:HTML_Content/HTML_Content, Contains monthly HTML files representing "Who is Hiring" posts. Each file is named by month (e.g., 2025-01.html) and includes nested comments. script:parse_and_extract_posts.py
+- output file:Nested_Job_Posts.json. Input file:HTML_Content/HTML_Content, Contains monthly HTML files representing "Who is Hiring" posts. Each file is named by month (e.g., 2025-01.html) and includes nested comments. 
 - Reads HTML files from the folder: C:/Users/negin/HTML_Content/HTML_Content.
 - Uses BeautifulSoup to parse the HTML structure.
 - Identifies and extracts top-level comments (job posts) by checking indentation levels.
 - Organizes extracted data into a nested JSON format with the following structure: Month: Key representing the file name (e.g., "2025-01").comments: List of extracted top-level job posts. numJobPost: Count of extracted job posts for the month.
 - Saves the structured data in a JSON file
+  
+### `count_job_posts.py`
+***Purpose**:To extract the number of job posts and their associated dates from the processed HTML files or JSON structure, summarizing the job post count by date for analysis or visualization.
+
+**Key Functionality**:
+- output:job_post_counts.json. Input:HTML content
+- Iterates through parsed data containing HTML content or JSON files.
+- Extracts the date and counts the number of job posts in each.
+- Outputs a summary of job post counts with their respective dates.
+- Saves the results to a structured JSON file or displays them in a readable format for further analysis.
 
 # result
 
@@ -89,3 +99,12 @@
 - Stores parsed comments from each HTML file under the respective month key.
 - Includes metadata such as the number of job posts (numJobPost) for each month.
 - Provides a cleaned dataset for additional analysis or reporting.
+
+### `job_post_counts.json`
+***Purpose**:To provide a simplified summary of the number of job posts for each date extracted from the HTML_content file. This file is essential for quick analysis and visualization of job post trends over time.
+
+**Key Functionality**:
+- output:job_post_counts.json. Input:HTML content. script:count_job_posts.py
+- Stores the count of job posts associated with each date.
+- Provides a clear and concise structure for further data analysis or visualization
+
