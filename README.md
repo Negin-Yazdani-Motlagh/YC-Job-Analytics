@@ -103,7 +103,7 @@
 - Contains the title, URL, and file path of each post's HTML content.
 - Links each entry to its corresponding saved .html file.
 
-### `nested_comments.json` NOT AVAILBLE 
+### `Nested_Job_Posts.json` NOT AVAILBLE 
 **Purpose**: Stores the parsed data from monthly HTML files of "Who is Hiring" posts, keeping only top-level job posts and removing replies for further analysis.
 **Key Functionality**:
 - Scripts: `parse_and_extract_posts.py`
@@ -124,6 +124,7 @@
 **Purpose**: The purpose of this file is to provide a detailed analysis of the occurrence of predefined soft skills across job posts for different months and years. It serves as an organized and structured dataset to enable further insights, such as trends in soft skill demands over time.
 
 **Key Functionality**:
+- scripts name: `analyze_soft_skills_occurrence.py`
 - Grouped by Year and Month
 - Each month includes a breakdown of soft skills mentioned in job posts, sorted in descending order based on their frequency.
 - The total number of job posts for each month is recorded to provide context for skill frequency analysis
