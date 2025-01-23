@@ -54,6 +54,18 @@
 - Outputs a summary of job post counts with their respective dates.
 - Saves the results to a structured JSON file or displays them in a readable format for further analysis.
 
+### `analyze_soft_skills_occurrence.py`
+**Purpose**: This script analyzes the occurrence of predefined soft skills within job posts extracted from a nested JSON dataset. It organizes the results by month and year, identifies the number of job posts mentioning soft skills, and generates a structured JSON output for further analysis.
+
+**Key Functionality**:
+- Input: "Nested Job Posts JSON" and Dictionary of Soft Skills (Excel). Output:soft_skills_occurrence_analysis
+- Load and Process Input Data
+- Counts occurrences of soft skills mentioned in the job post comments
+- Sorts the soft skills by their frequency in descending order for each month.
+- Structures results with months grouped by year
+- Includes "Who is Hiring Right Now" data in the appropriate chronological position
+- Saves the processed data to a new JSON file for visualization or further analysis.
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -107,4 +119,12 @@
 - output:job_post_counts.json. Input:HTML content. script:count_job_posts.py
 - Stores the count of job posts associated with each date.
 - Provides a clear and concise structure for further data analysis or visualization
+
+### `soft_skills_occurrence_analysis.json`
+**Purpose**: The purpose of this file is to provide a detailed analysis of the occurrence of predefined soft skills across job posts for different months and years. It serves as an organized and structured dataset to enable further insights, such as trends in soft skill demands over time.
+
+**Key Functionality**:
+- Grouped by Year and Month
+- Each month includes a breakdown of soft skills mentioned in job posts, sorted in descending order based on their frequency.
+- The total number of job posts for each month is recorded to provide context for skill frequency analysis
 
