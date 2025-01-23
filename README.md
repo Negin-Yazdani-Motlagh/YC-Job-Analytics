@@ -66,6 +66,14 @@
 - Includes "Who is Hiring Right Now" data in the appropriate chronological position
 - Saves the processed data to a new JSON file for visualization or further analysis.
 
+### `visualize_soft_skills_proportion.py`
+**Purpose**: To analyze and visualize the proportion of job posts mentioning soft skills over time. This helps identify trends in the emphasis on soft skills in job postings.
+**Key Functionality**:
+- Input files: Reads a nested JSON file containing job post data. Loads a dictionary of soft skills from an Excel file. output file: soft_skills_proportion_chart.png.
+- For each month and year, calculates the proportion of job posts mentioning at least one soft skill relative to the total job posts.
+- Converts month and year information into a datetime format. Sorts data chronologically for consistent visualization.
+- Saves the chart as a PNG file for further use
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -128,4 +136,11 @@
 - Grouped by Year and Month
 - Each month includes a breakdown of soft skills mentioned in job posts, sorted in descending order based on their frequency.
 - The total number of job posts for each month is recorded to provide context for skill frequency analysis
+
+### `soft_skills_proportion_chart.png`
+**Purpose**: To provide a visual representation of the proportion of job posts mentioning at least one soft skill over time. This chart helps identify trends and patterns in the demand for soft skills in the job market.
+**Key Functionality**:
+- Displays how the emphasis on soft skills in job postings evolves across months and years
+- The chart is organized by date, ensuring an easy-to-follow timeline
+- Each data point represents the normalized ratio of job posts mentioning soft skills to the total job posts for a given period
 
