@@ -74,6 +74,17 @@
 - Converts month and year information into a datetime format. Sorts data chronologically for consistent visualization.
 - Saves the chart as a PNG file for further use
 
+### `Job_Posts_Pre_Post_ChatGPT.py`
+**Purpose**: This script analyzes job posts from the Y Combinator dataset to determine the proportion of job posts mentioning soft skills before and after the launch of ChatGPT (November 2022). The goal is to identify trends and changes in how often soft skills are referenced in job posts over time.
+
+**Key Functionality**:
+- Reads nested job post data from a JSON file
+- Searches job post comments for mentions of soft skills using a predefined dictionary of keywords.
+- Splits the data into pre-ChatGPT (before November 2022) and post-ChatGPT (November 2022 and onward) based on the job post dates
+- Calculates the proportion of job posts mentioning at least one soft skill compared to the total number of job posts for each month-year
+- Plots the trends of soft skill mentions over time, with separate lines for pre- and post-ChatGPT periods
+- output name:soft_skills_pre_post_chatgpt_chart.png
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -143,4 +154,11 @@
 - Displays how the emphasis on soft skills in job postings evolves across months and years
 - The chart is organized by date, ensuring an easy-to-follow timeline
 - Each data point represents the normalized ratio of job posts mentioning soft skills to the total job posts for a given period
+
+### `soft_skills_pre_post_chatgpt_chart.png`
+**Purpose**:This chart visualizes the proportion of job posts mentioning soft skills before and after the launch of ChatGPT (November 2022). It highlights trends over time, showing how the emphasis on soft skills in job postings has evolved in relation to this milestone in AI development.
+**Key Functionality**:
+- Input Files: Nested_Job_Posts.json and Dictionary of soft skills.xlsx. Output File:soft_skills_pre_post_chatgpt_chart.png. Script Name:Job_Posts_Pre_Post_ChatGPT.py
+- Displays separate trend lines for job posts mentioning soft skills in the pre-ChatGPT and post-ChatGPT periods
+- Illustrates the proportion of job posts with soft skills mentions relative to the total number of job posts per month.
 
