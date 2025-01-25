@@ -85,6 +85,17 @@
 - Plots the trends of soft skill mentions over time, with separate lines for pre- and post-ChatGPT periods
 - output name:soft_skills_pre_post_chatgpt_chart.png
 
+  ### `Soft_Skills_Trend_Analysis.py`
+**Purpose**: The script processes a JSON dataset containing monthly occurrences of soft skills and reorganizes the data into a structured format for easier analysis. It outputs the restructured data into an Excel file for further exploration and visualization.
+
+**Key Functionality**:
+- Input file:soft_skills_occurrence_analysis.json. Output file:soft_skills_monthly_occurrence_restructured
+- Reads a JSON file containing soft skill occurrences categorized by year and month
+- Combines month and year into a single column header (e.g., "January 2023")
+- Transforms the processed dictionary into a Pandas DataFrame
+- Exports the resulting DataFrame to an Excel file for easy access and visualization
+
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -160,5 +171,14 @@
 **Key Functionality**:
 - Input Files: Nested_Job_Posts.json and Dictionary of soft skills.xlsx. Output File:soft_skills_pre_post_chatgpt_chart.png. Script Name:Job_Posts_Pre_Post_ChatGPT.py
 - Displays separate trend lines for job posts mentioning soft skills in the pre-ChatGPT and post-ChatGPT periods
-- Illustrates the proportion of job posts with soft skills mentions relative to the total number of job posts per month.
+- Illustrates the proportion of job posts with soft skills mentions relative to the total number of job posts per month
+
+### `soft_skills_monthly_occurrence_restructured.xlsx`
+**Purpose**: This file provides a restructured view of soft skill occurrences over time, making it easier to analyze monthly trends and patterns. It serves as a ready-to-use dataset for visualization and further analysis.
+
+**Key Functionality**:
+- Script Name: Soft_Skills_Trend_Analysis.py. Input File Name: soft_skills_occurrence_analysis.json. Output File Name: soft_skills_monthly_occurrence_restructured.xlsx.
+- Rows represent individual soft skills.
+- Columns represent time periods (formatted as "Month Year").
+- Cell values indicate the number of occurrences for each skill during the specified time period.
 
