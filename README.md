@@ -85,20 +85,17 @@
 - Plots the trends of soft skill mentions over time, with separate lines for pre- and post-ChatGPT periods
 - output name:soft_skills_pre_post_chatgpt_chart.png
 
-  ### `Soft_Skills_Trend_Analysis.py`
-**Purpose**: The script processes a JSON dataset containing monthly occurrences of soft skills and reorganizes the data into a structured format for easier analysis. It outputs the restructured data into an Excel file for further exploration and visualization.
+### `Soft_Skills_Trend_Analysis.py`
+**Purpose**: The script processes a JSON dataset containing monthly occurrences of soft skills and organizes the data into a structured format for deeper analysis and visualization. It calculates proportions of skill occurrences relative to total job postings (numJobPost) and outputs the results into an Excel file with multiple tabs for comprehensive exploration.
 
 **Key Functionality**:
-- Input file:soft_skills_occurrence_analysis.json. Output file:soft_skills_monthly_occurrence_restructured
+- Input file:soft_skills_occurrence_analysis.json. Output file:soft_skills_occurrence_analysis_with_proportions.xlsx
 - Reads a JSON file containing soft skill occurrences categorized by year and month
 - Combines month and year into a single column header (e.g., "January 2023")
 - Transforms the processed dictionary into a Pandas DataFrame
+- Adds a new tab (Proportions) to the Excel file. Calculates the proportion of each skill's occurrence relative to total job postings for each time period: Formula: Proportion = (Skill Occurrence / numJobPost)
+- Rounds the calculated proportions to two decimal places for clarity.
 - Exports the resulting DataFrame to an Excel file for easy access and visualization
-
-### `Soft_Skills_Proportions_Calculator.py`
-**Purpose**:
-
-**Key Functionality**:
 
 # result
 
@@ -177,17 +174,15 @@
 - Displays separate trend lines for job posts mentioning soft skills in the pre-ChatGPT and post-ChatGPT periods
 - Illustrates the proportion of job posts with soft skills mentions relative to the total number of job posts per month
 
-### `soft_skills_monthly_occurrence_restructured.xlsx`
-**Purpose**: This file provides a restructured view of soft skill occurrences over time, making it easier to analyze monthly trends and patterns. It serves as a ready-to-use dataset for visualization and further analysis.
+### `soft_skills_occurrence_analysis_with_proportions.xlsx`
+**Purpose**: This file provides a restructured and comprehensive view of soft skill occurrences and their proportions over time, enabling detailed analysis of trends and patterns. It is designed for visualization, comparison, and further analytical purposes.
 
 **Key Functionality**:
-- Script Name: Soft_Skills_Trend_Analysis.py. Input File Name: soft_skills_occurrence_analysis.json. Output File Name: soft_skills_monthly_occurrence_restructured.xlsx.
+- Script Name: Soft_Skills_Trend_Analysis.py. Input File Name: soft_skills_occurrence_analysis.json. Output File Name: soft_skills_occurrence_analysis_with_proportions.xlsx
 - Rows represent individual soft skills.
 - Columns represent time periods (formatted as "Month Year").
 - Cell values indicate the number of occurrences for each skill during the specified time period.
+- Computed the proportion of each skill's occurrence relative to the total job postings for each time period.
+- Rounded proportions to two decimal places for simplicity and readability.
 
-### `soft_skills_occurrence_analysis_with_proportions.xlsx`
-**Purpose**:
-
-**Key Functionality**:
 
