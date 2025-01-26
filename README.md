@@ -95,6 +95,10 @@
 - Transforms the processed dictionary into a Pandas DataFrame
 - Exports the resulting DataFrame to an Excel file for easy access and visualization
 
+### `Soft_Skills_Proportions_Calculator.py`
+**Purpose**:
+
+**Key Functionality**:
 
 # result
 
@@ -181,4 +185,9 @@
 - Rows represent individual soft skills.
 - Columns represent time periods (formatted as "Month Year").
 - Cell values indicate the number of occurrences for each skill during the specified time period.
+
+### `soft_skills_occurrence_analysis_with_proportions.xlsx`
+**Purpose**:
+
+**Key Functionality**:
 
