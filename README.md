@@ -184,5 +184,9 @@
 - Cell values indicate the number of occurrences for each skill during the specified time period.
 - Computed the proportion of each skill's occurrence relative to the total job postings for each time period.
 - Rounded proportions to two decimal places for simplicity and readability.
-
-
+- 
+### `soft_skills_proportion_chart ( math, science)`
+**Purpose**: To provide a visual representation of the proportion of job posts mentioning at least one soft skill over time. This chart helps identify trends and patterns in the demand for soft skills in the job market.
+**Key Functionality**:
+- Input files: Reads a nested JSON file containing job post data. Loads a dictionary of soft skills from an Excel file include math and science. output file: soft_skills_proportion_chart ( math, science).png.
+- Script name: visualize_soft_skills_proportion.py
