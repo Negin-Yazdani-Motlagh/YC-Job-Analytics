@@ -108,6 +108,15 @@
 - Saves the processed data into an Excel file for future reference or additional analysis.
 - Generates a line chart visualizing seasonal changes in job postings, labeled by months.
 
+### `Seasonal_Job_Postings_Yearly_Comparison.py`
+**Purpose**:To analyze and visualize seasonal changes in job postings over multiple years, providing insights into trends and fluctuations in job postings by month and year.
+**Key Functionality**:
+- Input file: Reads a JSON file containing job postings data (job_post_counts.json). Output file:seasonal_change_job_postings_yearly.png
+- Extracts and cleans month and year information from the dataset
+- Converts month names to numerical order for consistent plotting
+- Creates a pivot table to organize job postings data by month (rows) and year (columns)
+- Plots a multi-line graph showing the number of job postings for each month across all years
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -209,3 +218,12 @@
 - Lists raw job posting data with columns for the exact date, job post counts, month, and year. Enables further analysis or cross-referencing of specific time periods
 - Displays the average number of job postings for each month across all years
 - Highlights seasonal trends and peaks in job postings
+  
+### `seasonal_change_job_postings_yearly.png` and `seasonal_job_postings_yearly.xlsx`
+**Purpose**: To visualize and analyze the seasonal trends in job postings over multiple years, helping identify patterns, peaks, and troughs across different months and years.
+**Key Functionality**:
+- Input file: Reads a JSON file containing job postings data (job_post_counts.json). Output file:seasonal_change_job_postings_yearly.png Script name: `Seasonal_Job_Postings_Yearly_Comparison.py`
+- A visually enhanced, color-coded line chart displaying monthly job posting trends for each year.
+- Clearly distinguishes trends for better readability, even when comparing numerous years.
+- Highlights seasonal variations, making it easier to identify consistent patterns or anomalies.
+- A pivot table with months as rows and years as columns, providing a concise year-by-year comparison for each month.
