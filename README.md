@@ -97,6 +97,17 @@
 - Rounds the calculated proportions to two decimal places for clarity.
 - Exports the resulting DataFrame to an Excel file for easy access and visualization
 
+### `Seasonal_Job_Postings_Analysis.py`
+**Purpose**: This script analyzes seasonal trends in job postings over time by processing JSON data. It calculates monthly averages and visualizes seasonal changes, aiding in understanding patterns in job postings.
+**Key Functionality**:
+- Input: JSON file "job_post_counts" containing job posting data by month and year. Output file:Excel file: seasonal_job_postings.xlsx and PNG file: seasonal_change_job_postings.png
+- Reads and processes job posting data from a JSON file.
+- Extracts and cleans dates from the dataset.
+- Adds separate columns for Month and Year for detailed analysis.
+- Calculates the average number of job postings for each month across all years.
+- Saves the processed data into an Excel file for future reference or additional analysis.
+- Generates a line chart visualizing seasonal changes in job postings, labeled by months.
+
 # result
 
 ### `HTML_All_Titles.json`
@@ -190,3 +201,11 @@
 **Key Functionality**:
 - Input files: Reads a nested JSON file containing job post data. Loads a dictionary of soft skills from an Excel file include math and science. output file: soft_skills_proportion_chart ( math, science).png.
 - Script name: visualize_soft_skills_proportion.py
+
+### `seasonal_job_postings.xlsx` and  `seasonal_change_job_postings.png`
+**Purpose**: To provide a detailed analysis of seasonal trends in job postings, capturing monthly variations and presenting the findings in both tabular and visual formats.
+**Key Functionality**:
+- Input: JSON file "job_post_counts" containing job posting data by month and year. Output file:Excel file: seasonal_job_postings.xlsx and PNG file: seasonal_change_job_postings.png. script name:`Seasonal_Job_Postings_Analysis.py`
+- Lists raw job posting data with columns for the exact date, job post counts, month, and year. Enables further analysis or cross-referencing of specific time periods
+- Displays the average number of job postings for each month across all years
+- Highlights seasonal trends and peaks in job postings
