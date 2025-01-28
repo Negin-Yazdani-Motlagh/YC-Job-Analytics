@@ -2,6 +2,15 @@
 
 # codes
 
+### `pagination_scraper.py`
+**Purpose**: To scrape all paginated content from websites with multiple pages, ensuring relevant data or URLs are collected systematically while navigating through each page
+**Key Functionality**:
+- Dynamically navigates through multiple pages using "Next," "More," or similar pagination buttons.
+- Supports ?page=x URL patterns or dynamically generated pagination links
+- Extracts specific information from each page, such as job posting URLs, titles, or other relevant elements
+- Gracefully manages situations where a "Next" button is missing, or the page fails to load
+- Saves scraped data (e.g., URLs, job titles) into a text file for easy access
+
 ### `fetch_html_titles.py`
 **Purpose**:Fetches and stores HTML content from a list of predefined URLs for analysis or archiving.
 
