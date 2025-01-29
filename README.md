@@ -2,7 +2,7 @@
 
 # codes
 
-### `pagination_scraper.py`
+### `yc_job_extractor.py`
 **Purpose**: To scrape all paginated content from websites with multiple pages, ensuring relevant data or URLs are collected systematically while navigating through each page
 **Key Functionality**:
 - Dynamically navigates through multiple pages using "Next," "More," or similar pagination buttons.
