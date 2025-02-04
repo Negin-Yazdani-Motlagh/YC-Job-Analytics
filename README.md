@@ -130,12 +130,15 @@
 **Purpose**: The purpose of this script is to analyze and categorize soft skills extracted from nested job post data. It identifies and counts occurrences of sub-skills within job post comments and aggregates them under corresponding head skill categories.
 
 **Key Functionality**:
-- Input Files: "Nested_Job_Posts.json" and Dictionary of soft skills (8).xlsx. Output File:categorized_soft_skills_analysis.json
-- Reads an Excel file containing head skills and their associated sub-skills
-- Maps sub-skills to their respective head skills for easy categorization
-- Processes a nested JSON file containing job post data
-- Extracts year and month information for grouping data chronologically
-- Scans job post comments to count the occurrences of each sub-skill
+- soft_skills_occurrence_analysis.json: Contains extracted occurrences of soft skills.(This file have been extracted based on vs 8 of dictionary using privious code).
+- Dictionary of soft skills (8).xlsx: A dictionary file mapping head skills to their respective sub-skills.
+- Output File:categorized_soft_skills_analysis.json: Stores categorized counts of head skills based on their sub-skill occurrences.
+- Reads an Excel file containing head skills and their associated sub-skills.
+- Maps sub-skills to their respective head skills for accurate categorization.
+- Processes a JSON file containing soft skill occurrences grouped by year and month.
+- Scans the JSON data to count occurrences of sub-skills and updates the counts under their respective head categories.
+- Handles case insensitivity (reads upper and lower case skill mentions equally).
+- Outputs a JSON file categorizing the soft skills under head categories with chronological grouping (by year and month).
 
 # result
 
