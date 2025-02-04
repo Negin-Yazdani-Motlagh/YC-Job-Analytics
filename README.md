@@ -126,6 +126,17 @@
 - Creates a pivot table to organize job postings data by month (rows) and year (columns)
 - Plots a multi-line graph showing the number of job postings for each month across all years
 
+### `categorized_soft_skills.py`
+**Purpose**: The purpose of this script is to analyze and categorize soft skills extracted from nested job post data. It identifies and counts occurrences of sub-skills within job post comments and aggregates them under corresponding head skill categories.
+
+**Key Functionality**:
+- Input Files: "Nested_Job_Posts.json" and Dictionary of soft skills (8).xlsx. Output File:categorized_soft_skills_analysis.json
+- Reads an Excel file containing head skills and their associated sub-skills
+- Maps sub-skills to their respective head skills for easy categorization
+- Processes a nested JSON file containing job post data
+- Extracts year and month information for grouping data chronologically
+- Scans job post comments to count the occurrences of each sub-skill
+
 # result
 
 ### `HTML_All_Titles.json`
