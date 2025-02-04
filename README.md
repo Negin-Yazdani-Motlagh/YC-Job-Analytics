@@ -250,3 +250,14 @@
 - Clearly distinguishes trends for better readability, even when comparing numerous years.
 - Highlights seasonal variations, making it easier to identify consistent patterns or anomalies.
 - A pivot table with months as rows and years as columns, providing a concise year-by-year comparison for each month.
+
+### `categorized_soft_skills_by_headcategory.json`
+**Purpose**: The purpose of this JSON file is to store the aggregated counts of soft skills categorized under their respective head categories. It provides a clear representation of how often head skill categories appear in job post data, based on occurrences of their associated sub-skills.
+
+**Key Functionality**:
+- Script Name:categorized_soft_skills.py.
+- Input Files: Nested_Job_Posts.json – Contains job post data, including comments and metadata such as year and month.Dictionary of soft skills (8).xlsx – A structured Excel file mapping head skill categories to their associated sub-skills.
+- Data is grouped by year and month for temporal analysis of soft skill demands.
+- Sub-skills found in job post comments are counted and aggregated under their respective head skill categories. Each head category represents the total occurrences of its associated sub-skills.
+- Ensures that sub-skills are accurately mapped to their head categories, regardless of capitalization in the job post comments.
+- Tracks the total number of job posts analyzed for each year and month (numJobPost), providing context for the aggregated data.
