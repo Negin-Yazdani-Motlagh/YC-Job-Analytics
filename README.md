@@ -271,3 +271,14 @@
 - Sub-skills found in job post comments are counted and aggregated under their respective head skill categories. Each head category represents the total occurrences of its associated sub-skills.
 - Ensures that sub-skills are accurately mapped to their head categories, regardless of capitalization in the job post comments.
 - Tracks the total number of job posts analyzed for each year and month (numJobPost), providing context for the aggregated data.
+
+ ### `soft_skills_occurrence_analysis_final.xlsx`
+**Purpose**: This script processes a JSON file containing data on the occurrences of soft skills categorized by year and month.It performs data cleaning, chronological sorting, proportion calculations, and outputs the data to an Excel file.
+
+**Key Functionality**:
+- Script Name: `Soft_Skills_Trend_Analysis_categorize.py`. input_file = categorized_soft_skills_by_headcategory.json' and output_file = soft_skills_occurrence_analysis_final.xlsx'
+- Reads a JSON file containing skill occurrences grouped by month and year.
+- Cleans and organizes the data, removing invalid or unwanted entries.
+- Sorts data in chronological order (by year and month).
+- Calculates proportions for each skill occurrence relative to the total number of job posts for each time period.
+- Exports the results to an Excel file with separate tabs for original data and proportions.
