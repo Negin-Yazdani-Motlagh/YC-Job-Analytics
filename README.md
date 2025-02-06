@@ -140,6 +140,16 @@
 - Handles case insensitivity (reads upper and lower case skill mentions equally).
 - Outputs a JSON file categorizing the soft skills under head categories with chronological grouping (by year and month).
 
+### `Soft_Skills_Trend_Analysis_categorize.py`
+**Purpose**: This script processes a JSON file containing soft skill occurrence data grouped by year and month.
+
+**Key Functionality**: 
+- input_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\v8\categorized_soft_skills_by_headcategory.json' and output_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\v8\soft_skills_trend_analysis_categorized.xlsx'
+- Reads a JSON input file containing skill occurrences over time.
+- Cleans and sorts the data in chronological order (by year and month).
+- Calculates proportions for each skill based on the total number of job posts (`numJobPost`).
+- Exports results to an Excel file with two sheets: "Original Data" and "Proportions".
+
 # result
 
 ### `HTML_All_Titles.json`
