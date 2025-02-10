@@ -150,7 +150,23 @@
 - Calculates proportions for each skill based on the total number of job posts (`numJobPost`).
 - Exports results to an Excel file with two sheets: "Original Data" and "Proportions".
 
+### `merge_who_is_hiring_urls.py`
+**Purpose**: This script is designed to merge a new "Who is hiring?" URL entry into an existing JSON file of Hacker News URLs while ensuring data consistency and avoiding duplicates.
+**Key Functionality**: 
+- Loads an existing JSON file containing "Who is hiring?" URL entries. Input file: "HTML_Content_Data.json", Output file:Feb_who_is_hiring_URLs.json
+- Adds a new URL entry to the list while checking for duplicates.
+- Places the new entry at the top of the JSON data for better visibility.
+- Saves the updated data into a new JSON file.
+
+
 # result
+
+### `hacker_news_urls.txt`
+**Purpose**: This file contains a list of URLs extracted from Hacker News. It serves as the input data for scripts that filter, process, or analyze specific posts such as "Who is hiring?" threads.
+
+**Key Functionality**:
+- Provides a complete set of URLs scraped from Hacker News for further processing.
+- Acts as the primary data source for identifying and extracting targeted information like "Who is hiring?" posts.
 
 ### `HTML_All_Titles.json`
 **Purpose**: Stores the results of the fetch_html_titles.py script, containing the HTML content and metadata for each processed URL.
@@ -282,3 +298,11 @@
 - Sorts data in chronological order (by year and month).
 - Calculates proportions for each skill occurrence relative to the total number of job posts for each time period.
 - Exports the results to an Excel file with separate tabs for original data and proportions.
+
+# Apr 2011_ Jan 2025
+
+### `Feb_who_is_hiring_URLs.json`
+**Purpose**: This JSON file contains a curated list of "Who is hiring?" URLs from Hacker News, specifically updated to include the latest entries (e.g., February 2025). It serves as a centralized dataset for further processing or analysis of job posts.
+**Key Functionality**: 
+- Acts as an updated version of the existing Who_is_hiring_URLs.json with new entries added at the top.
+- Script name: `merge_who_is_hiring_urls.py`
