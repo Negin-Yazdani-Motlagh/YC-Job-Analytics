@@ -316,3 +316,13 @@ This updated file builds on soft_skills_occurrence_analysis.json, providing a re
 - Grouped by Year and Month
 - Each month includes a breakdown of soft skills mentioned in job posts, sorted in descending order based on their frequency.
 - The total number of job posts for each month is recorded to provide context for skill frequency analysis
+
+### `Feb_categorized_soft_skills_by_headcategory.json`
+**Purpose**: Updated Version of: categorized_soft_skills_by_headcategory.json
+This updated JSON file stores the aggregated counts of soft skills categorized under their respective headcategories, specifically for February 2025. It refines the mapping of sub-skills to their respective categories, improving the accuracy of soft skill occurrence tracking across job postings. The file provides a structured view of how often different soft skill categories appear in job post data based on associated sub-skills.
+**Key Functionality**: 
+- Script Name: categorized_soft_skills.py. Input Files:Feb_Nested_Job_Posts.json – Contains job post data, including comments, metadata, and timestamps.Dictionary of soft skills (9).xlsx – A structured Excel file mapping headcategories to their associated sub-skills.
+- Data is grouped by year and month for temporal analysis of soft skill demands.
+- Sub-skills found in job post comments are counted and aggregated under their respective head skill categories. Each head category represents the total occurrences of its associated sub-skills.
+- Ensures that sub-skills are accurately mapped to their head categories, regardless of capitalization in the job post comments.
+- Tracks the total number of job posts analyzed for each year and month (numJobPost), providing context for the aggregated data.
