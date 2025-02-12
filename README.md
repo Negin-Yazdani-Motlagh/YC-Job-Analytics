@@ -299,10 +299,20 @@
 - Calculates proportions for each skill occurrence relative to the total number of job posts for each time period.
 - Exports the results to an Excel file with separate tabs for original data and proportions.
 
-# Apr 2011_ Jan 2025
+# Apr 2011_ Feb 2025
 
 ### `Feb_who_is_hiring_URLs.json`
 **Purpose**: This JSON file contains a curated list of "Who is hiring?" URLs from Hacker News, specifically updated to include the latest entries (e.g., February 2025). It serves as a centralized dataset for further processing or analysis of job posts.
 **Key Functionality**: 
 - Acts as an updated version of the existing Who_is_hiring_URLs.json with new entries added at the top.
 - Script name: `merge_who_is_hiring_urls.py`
+
+
+### `Feb_soft_skills_occurrence_analysis.json`
+**Purpose**: soft_skills_occurrence_analysis.json
+This updated file builds on soft_skills_occurrence_analysis.json, providing a refined and detailed analysis of the occurrence of predefined soft skills across job posts for February 2025. It serves as a structured dataset for tracking trends in soft skill demands over time with improved categorization and data accuracy.
+**Key Functionality**: 
+- scripts name: `analyze_soft_skills_occurrence.py` version (9) of dictionary has been used.
+- Grouped by Year and Month
+- Each month includes a breakdown of soft skills mentioned in job posts, sorted in descending order based on their frequency.
+- The total number of job posts for each month is recorded to provide context for skill frequency analysis
