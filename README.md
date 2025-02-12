@@ -77,6 +77,7 @@
 
 ### `visualize_soft_skills_proportion.py`
 **Purpose**: To analyze and visualize the proportion of job posts mentioning soft skills over time. This helps identify trends in the emphasis on soft skills in job postings.
+
 **Key Functionality**:
 - Input files: Reads a nested JSON file containing job post data. Loads a dictionary of soft skills from an Excel file. output file: soft_skills_proportion_chart.png.
 - For each month and year, calculates the proportion of job posts mentioning at least one soft skill relative to the total job posts.
