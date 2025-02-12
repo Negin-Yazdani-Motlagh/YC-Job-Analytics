@@ -205,6 +205,7 @@
 
 ### `Nested_Job_Posts.json` NOT AVAILBLE 
 **Purpose**: Stores the parsed data from monthly HTML files of "Who is Hiring" posts, keeping only top-level job posts and removing replies for further analysis.
+
 **Key Functionality**:
 - Scripts: `parse_and_extract_posts.py`
 - Organizes job post data into a structured JSON format.
@@ -231,6 +232,7 @@
 
 ### `soft_skills_proportion_chart.png`
 **Purpose**: To provide a visual representation of the proportion of job posts mentioning at least one soft skill over time. This chart helps identify trends and patterns in the demand for soft skills in the job market.
+
 **Key Functionality**:
 - Displays how the emphasis on soft skills in job postings evolves across months and years
 - The chart is organized by date, ensuring an easy-to-follow timeline
@@ -238,6 +240,7 @@
 
 ### `soft_skills_pre_post_chatgpt_chart.png`
 **Purpose**:This chart visualizes the proportion of job posts mentioning soft skills before and after the launch of ChatGPT (November 2022). It highlights trends over time, showing how the emphasis on soft skills in job postings has evolved in relation to this milestone in AI development.
+
 **Key Functionality**:
 - Input Files: Nested_Job_Posts.json and Dictionary of soft skills.xlsx. Output File:soft_skills_pre_post_chatgpt_chart.png. Script Name:Job_Posts_Pre_Post_ChatGPT.py
 - Displays separate trend lines for job posts mentioning soft skills in the pre-ChatGPT and post-ChatGPT periods
@@ -256,12 +259,14 @@
 - 
 ### `soft_skills_proportion_chart ( math, science)`
 **Purpose**: To provide a visual representation of the proportion of job posts mentioning at least one soft skill over time. This chart helps identify trends and patterns in the demand for soft skills in the job market.
+
 **Key Functionality**:
 - Input files: Reads a nested JSON file containing job post data. Loads a dictionary of soft skills from an Excel file include math and science. output file: soft_skills_proportion_chart ( math, science).png.
 - Script name: visualize_soft_skills_proportion.py
 
 ### `seasonal_job_postings.xlsx` and  `seasonal_change_job_postings.png`
 **Purpose**: To provide a detailed analysis of seasonal trends in job postings, capturing monthly variations and presenting the findings in both tabular and visual formats.
+
 **Key Functionality**:
 - Input: JSON file "job_post_counts" containing job posting data by month and year. Output file:Excel file: seasonal_job_postings.xlsx and PNG file: seasonal_change_job_postings.png. script name:`Seasonal_Job_Postings_Analysis.py`
 - Lists raw job posting data with columns for the exact date, job post counts, month, and year. Enables further analysis or cross-referencing of specific time periods
@@ -270,6 +275,7 @@
   
 ### `seasonal_change_job_postings_yearly.png` and `seasonal_job_postings_yearly.xlsx`
 **Purpose**: To visualize and analyze the seasonal trends in job postings over multiple years, helping identify patterns, peaks, and troughs across different months and years.
+
 **Key Functionality**:
 - Input file: Reads a JSON file containing job postings data (job_post_counts.json). Output file:seasonal_change_job_postings_yearly.png Script name: `Seasonal_Job_Postings_Yearly_Comparison.py`
 - A visually enhanced, color-coded line chart displaying monthly job posting trends for each year.
@@ -303,6 +309,7 @@
 
 ### `Feb_who_is_hiring_URLs.json`
 **Purpose**: This JSON file contains a curated list of "Who is hiring?" URLs from Hacker News, specifically updated to include the latest entries (e.g., February 2025). It serves as a centralized dataset for further processing or analysis of job posts.
+
 **Key Functionality**: 
 - Acts as an updated version of the existing Who_is_hiring_URLs.json with new entries added at the top.
 - Script name: `merge_who_is_hiring_urls.py`
@@ -311,6 +318,7 @@
 ### `Feb_soft_skills_occurrence_analysis.json`
 **Purpose**: soft_skills_occurrence_analysis.json
 This updated file builds on soft_skills_occurrence_analysis.json, providing a refined and detailed analysis of the occurrence of predefined soft skills across job posts for February 2025. It serves as a structured dataset for tracking trends in soft skill demands over time with improved categorization and data accuracy.
+
 **Key Functionality**: 
 - scripts name: `analyze_soft_skills_occurrence.py` version (9) of dictionary has been used.
 - Grouped by Year and Month
@@ -320,6 +328,7 @@ This updated file builds on soft_skills_occurrence_analysis.json, providing a re
 ### `Feb_categorized_soft_skills_by_headcategory.json`
 **Purpose**: Updated Version of: categorized_soft_skills_by_headcategory.json
 This updated JSON file stores the aggregated counts of soft skills categorized under their respective headcategories, specifically for February 2025. It refines the mapping of sub-skills to their respective categories, improving the accuracy of soft skill occurrence tracking across job postings. The file provides a structured view of how often different soft skill categories appear in job post data based on associated sub-skills.
+
 **Key Functionality**: 
 - Script Name: categorized_soft_skills.py. Input Files:Feb_Nested_Job_Posts.json – Contains job post data, including comments, metadata, and timestamps.Dictionary of soft skills (9).xlsx – A structured Excel file mapping headcategories to their associated sub-skills.
 - Data is grouped by year and month for temporal analysis of soft skill demands.
