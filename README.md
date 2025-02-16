@@ -4,7 +4,9 @@
 
 ### `yc_job_extractor.py`
 **Purpose**: To scrape all paginated content from websites with multiple pages, ensuring relevant data or URLs are collected systematically while navigating through each page in the website (https://news.ycombinator.com/submitted?id=whoishiring) 
+
 **Key Functionality**:
+- Output file:"hacker_news_urls.txt"
 - Dynamically navigates through multiple pages using "Next," "More," or similar pagination buttons.
 - Supports ?page=x URL patterns or dynamically generated pagination links
 - Extracts specific information from each page, such as job posting URLs, titles, or other relevant elements
