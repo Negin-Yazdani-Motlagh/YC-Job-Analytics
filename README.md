@@ -362,3 +362,21 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 - Sub-skills found in job post comments are counted and aggregated under their respective head skill categories. Each head category represents the total occurrences of its associated sub-skills.
 - Ensures that sub-skills are accurately mapped to their head categories, regardless of capitalization in the job post comments.
 - Tracks the total number of job posts analyzed for each year and month (numJobPost), providing context for the aggregated data.
+
+### `Feb_soft_skills_pre_post_chatgpt_chart.png`
+**Purpose**: This chart visualizes the proportion of job posts mentioning soft skills before and after the launch of ChatGPT (November 2022). It highlights trends over time, showing how the emphasis on soft skills in job postings has evolved in relation to this milestone in AI development. This is just an updated version of "soft_skills_pre_post_chatgpt_chart.png"
+
+**Key Functionality**: 
+- Script Name: Job_Posts_Pre_Post_ChatGPT.py
+- Input Files: Nested_Job_Posts.json and Dictionary of soft skills.xlsx. Output File:soft_skills_pre_post_chatgpt_chart.png. Script Name:Job_Posts_Pre_Post_ChatGPT.py
+- Displays separate trend lines for job posts mentioning soft skills in the pre-ChatGPT and post-ChatGPT periods
+- Illustrates the proportion of job posts with soft skills mentions relative to the total number of job posts per month
+
+### `Who_Is_Hiring_Posts.json`
+**Purpose**:To store the extracted data of "Who is Hiring" posts, including their titles, direct URLs, and source page URLs, from the processed HTML content.
+
+**Key Functionality**:
+- This result has been driven from the code called "Extract_who_is_hiring.py" this is just an updated version of privious data and code.
+- Contains structured data with fields: title, url (direct post URL), and source_url (page from which the post was extracted).
+- Serves as the output of the Extract_who_is_hiring_posts.py script.
+- Enables easy access to filtered "Who is Hiring" posts for analysis or archiving.
