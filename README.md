@@ -162,8 +162,31 @@
 - Places the new entry at the top of the JSON data for better visibility.
 - Saves the updated data into a new JSON file.
 
+### `normalized_headcategories_trends.py`
+**Purpose**: This script analyzes and visualizes the trends of categorized headcategories (soft skills) in job postings over time. It normalizes the frequency of each category as a percentage of total job posts per year to provide insights into changing demands for specific skills.
+
+**Key Functionality**:
+- Input_file = categorized_soft_skills_by_headcategory.json' output_plot_file = normalized_headcategories_trends.png'
+- Load Data: Reads a JSON file containing categorized soft skills by headcategory from job postings.
+- Extracts yearly and monthly data, filtering relevant headcategories.
+- Aggregates total occurrences of each headcategory per year.
+- Calculates the total number of job posts per year.
+- Normalizes category mentions as a percentage of total job posts.
+
+### `plot_normalized_headcategories.py`
+**Purpose**: This script analyzes the trends of different headcategories of soft skills in job postings over time. It normalizes category mentions as a percentage of total job postings per year and visualizes each headcategory separately, highlighting pre- and post-2022 trends.
+
+**Key Functionality**:
+- input_file = categorized_soft_skills_by_headcategory.json'
+- output_folder = Headcategory_Plots'
+- Extracts relevant yearly and monthly data.
+- Aggregates total occurrences of each headcategory per year.
+- Computes the total number of job posts per year.
+- Normalizes category mentions as a percentage of total job postings.
 
 # result
+
+### Apr 2011_ Jan 2025
 
 ### `hacker_news_urls.txt`
 **Purpose**: This file contains a list of URLs extracted from Hacker News. It serves as the input data for scripts that filter, process, or analyze specific posts such as "Who is hiring?" threads.
