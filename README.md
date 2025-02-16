@@ -184,6 +184,19 @@
 - Computes the total number of job posts per year.
 - Normalizes category mentions as a percentage of total job postings.
 
+### `job_data_parser.py`
+**Purpose**: This script extracts, processes, and organizes job postings from a JSON dataset. It parses key job details such as job title, company name, salary range, and required experience from Y Combinator's job postings or similar datasets. The script ensures accurate formatting, normalization, and sorting of extracted job data before saving it as an Excel file.
+
+**Key Functionality**:
+-Input File: " Feb_Nested_Job_Posts.json". Output File: "Extracted_Job_Posts.xlsx"
+- Loads job postings from JSON: Reads job descriptions stored in a nested JSON format.
+- Extracts key job details: Parses job title, company name, salary range, and required experience using regex.
+- Normalizes salary values: Converts salary ranges (e.g., "$80K-$120K") into full numerical values.
+- Correctly extracts years of experience: Handles formats like "3-5 years", "5-10 y/o/e", "2 to 4 years".
+- Sorts jobs chronologically: Orders data by year and month for structured analysis.
+- Outputs structured data: Saves the cleaned job data as an Excel file (.xlsx).
+
+
 # result
 
 ### Apr 2011_ Jan 2025
@@ -380,3 +393,13 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 - Contains structured data with fields: title, url (direct post URL), and source_url (page from which the post was extracted).
 - Serves as the output of the Extract_who_is_hiring_posts.py script.
 - Enables easy access to filtered "Who is Hiring" posts for analysis or archiving.
+
+### `Extracted_Job_Posts.xlsx`
+**Purpose**: This Excel file stores structured job postings extracted from a JSON dataset. It provides a clean, organized view of job listings, making it easier to analyze trends in job titles, salaries, required experience, and hiring companies.
+
+**Key Functionality**:
+-Script Name:job_data_parser.py, Input File:"Feb_Nested_Job_Posts.json"
+- Chronologically ordered job postings: Sorted by year and month for structured insights.
+- Includes extracted job details: Each row contains: Year (e.g., 2025), Month (e.g., February), Job Title (e.g., Software Engineer), Company Name (e.g., OpenAI), Salary Range (e.g., $80,000 - $120,000 or 20% equity), Required Experience (e.g., 3-5 years, 5-10 y/o/e)
+- Normalized salary formats: Converts ranges like "$80K-$120K" into "$80,000 - $120,000".
+- Formatted for analysis: Ready for further processing in Excel, Tableau, or Python for trend analysis.
