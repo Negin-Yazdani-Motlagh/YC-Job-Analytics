@@ -172,6 +172,10 @@
 - Aggregates total occurrences of each headcategory per year.
 - Calculates the total number of job posts per year.
 - Normalizes category mentions as a percentage of total job posts.
+- Formula for calculating normalization "\text{NormalizedCount} = [\left( \frac{\text{Count}}{\text{TotalJobPosts}} \right) \times 100\]" 
+- Count= The number of times a specific headcategory (e.g., "communication skills") appears in job posts for a given year.
+- TotalJobPosts= The total number of job posts recorded in that year.
+- NormalizedCount = The percentage of job posts that mention the specific headcategory, ensuring that trends remain comparable over time.
 
 ### `plot_normalized_headcategories.py`
 **Purpose**: This script analyzes the trends of different headcategories of soft skills in job postings over time. It normalizes category mentions as a percentage of total job postings per year and visualizes each headcategory separately, highlighting pre- and post-2022 trends.
