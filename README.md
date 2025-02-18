@@ -403,3 +403,15 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 - Includes extracted job details: Each row contains: Year (e.g., 2025), Month (e.g., February), Job Title (e.g., Software Engineer), Company Name (e.g., OpenAI), Salary Range (e.g., $80,000 - $120,000 or 20% equity), Required Experience (e.g., 3-5 years, 5-10 y/o/e)
 - Normalized salary formats: Converts ranges like "$80K-$120K" into "$80,000 - $120,000".
 - Formatted for analysis: Ready for further processing in Excel, Tableau, or Python for trend analysis.
+
+### `Feb_normalized_headcategories_trends.png`
+**Purpose**: This script analyzes and visualizes the trends of categorized headcategories (soft skills) in job postings over time. It normalizes the frequency of each category as a percentage of total job posts per year to provide insights into changing demands for specific skills.
+
+**Key Functionality**:
+- Input_file = Feb_categorized_soft_skills_by_headcategory.json' output_plot_file = feb_normalized_headcategories_trends.png'
+- Load Data: Reads a JSON file containing categorized soft skills by headcategory from job postings.
+- Extracts yearly and monthly data, filtering relevant headcategories.
+- Aggregates total occurrences of each headcategory per year.
+- Calculates the total number of job posts per year.
+- Normalizes category mentions as a percentage of total job posts.
+
