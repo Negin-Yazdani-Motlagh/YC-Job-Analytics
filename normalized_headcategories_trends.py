@@ -1,12 +1,11 @@
-
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # File path to the JSON data
-input_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\v8\categorized_soft_skills_by_headcategory.json'
-output_plot_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\normalized_headcategories_trends.png'
+input_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\February 2025\Feb_categorized_soft_skills_by_headcategory.json'
+output_plot_file = r'C:\Users\negin\YC-Job-Analytics\Result_YC\February 2025\Feb_normalized_headcategories_trends.png'
 
 # Load the JSON data
 with open(input_file, 'r', encoding='utf-8') as f:
@@ -19,8 +18,10 @@ total_job_posts_per_year = {}
 # Extract job posts per year
 for year, months in data.items():
     if year.isdigit():  # Only process numeric years
+        year_int = int(year)
+        
         # Sum numJobPost across all months
-        total_job_posts_per_year[int(year)] = sum(
+        total_job_posts_per_year[year_int] = sum(
             month_data.get("numJobPost", 0) for month_data in months.values() if isinstance(month_data, dict)
         )
 
@@ -30,7 +31,7 @@ for year, months in data.items():
                 for headcategory, count in categories.items():
                     if headcategory != "numJobPost":  # Exclude job post count
                         time_series_data.append({
-                            "Year": int(year),
+                            "Year": year_int,
                             "Headcategory": headcategory,
                             "Count": count
                         })
@@ -57,6 +58,9 @@ agg_df['NormalizedCount'] = (agg_df['Count'] / agg_df['TotalJobPosts']) * 100  #
 print("Total Job Posts Per Year:", total_job_posts_per_year)
 print(agg_df.head())
 
+# Sort data by Year to ensure proper X-axis order
+agg_df = agg_df.sort_values(by="Year")
+
 # Plot normalized trends
 plt.figure(figsize=(16, 10))
 sns.lineplot(data=agg_df, x='Year', y='NormalizedCount', hue='Headcategory', palette='tab10')
@@ -64,7 +68,12 @@ sns.lineplot(data=agg_df, x='Year', y='NormalizedCount', hue='Headcategory', pal
 # Configure the plot
 plt.title("Normalized Trends of Headcategories Over Years", fontsize=16)
 plt.xlabel("Year", fontsize=12)
-plt.ylabel("Percentage of Mentions (%)", fontsize=12)  # Fixed y-axis label
+plt.ylabel("Percentage of Mentions (%)", fontsize=12)
+
+# Set specific X-axis ticks for all available years
+plt.xticks(sorted(agg_df["Year"].unique()), rotation=45)
+
+# Improve layout
 plt.legend(title="Headcategories", fontsize=10, title_fontsize=12, loc='upper left', bbox_to_anchor=(1, 1))
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
