@@ -422,3 +422,6 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 - Calculates the total number of job posts per year.
 - Normalizes category mentions as a percentage of total job posts.
 
+### `Feb_all_headcategories_trends.png`
+**Purpose**:
+**Key Functionality**:
