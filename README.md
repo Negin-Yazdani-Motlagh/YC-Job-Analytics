@@ -200,6 +200,9 @@
 - Sorts jobs chronologically: Orders data by year and month for structured analysis.
 - Outputs structured data: Saves the cleaned job data as an Excel file (.xlsx).
 
+### `Monthly_normalized_headcategories_trends.py`
+**Purpose**: 
+**Key Functionality**:
 
 # result
 
