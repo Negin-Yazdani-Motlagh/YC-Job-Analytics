@@ -204,6 +204,12 @@
 **Purpose**: 
 **Key Functionality**:
 
+
+### `Soft_Skills_Frequency_Analysis.py`
+**Purpose**: 
+**Key Functionality**:
+
+
 # result
 
 ### Apr 2011_ Jan 2025
