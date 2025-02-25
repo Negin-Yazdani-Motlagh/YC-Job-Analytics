@@ -210,6 +210,11 @@
 **Key Functionality**:
 
 
+### `Visualize_Soft_Skills_Trend_Analysis.py`
+**Purpose**: 
+**Key Functionality**:
+
+
 # result
 
 ### Apr 2011_ Jan 2025
@@ -431,3 +436,8 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 ### `Feb_all_headcategories_trends.png`
 **Purpose**:
 **Key Functionality**:
+
+### `All_Months_Soft_Skills_Counts.json`
+**Purpose**:
+**Key Functionality**:
+
