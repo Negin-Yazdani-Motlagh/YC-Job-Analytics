@@ -441,3 +441,7 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 **Purpose**:
 **Key Functionality**:
 
+### `Soft_Skills_Trend.png`
+**Purpose**:
+**Key Functionality**:
+
