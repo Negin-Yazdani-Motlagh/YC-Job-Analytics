@@ -205,11 +205,6 @@
 **Key Functionality**:
 
 
-### `Soft_Skills_Frequency_Analysis.py`
-**Purpose**: 
-**Key Functionality**:
-
-
 ### `Visualize_Soft_Skills_Trend_Analysis.py`
 **Purpose**: 
 **Key Functionality**:
@@ -433,15 +428,6 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 - Calculates the total number of job posts per year.
 - Normalizes category mentions as a percentage of total job posts.
 
-### `Feb_all_headcategories_trends.png`
-**Purpose**:
-**Key Functionality**:
 
-### `All_Months_Soft_Skills_Counts.json`
-**Purpose**:
-**Key Functionality**:
 
-### `Soft_Skills_Trend.png`
-**Purpose**:
-**Key Functionality**:
 
