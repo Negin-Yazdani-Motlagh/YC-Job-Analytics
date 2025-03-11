@@ -221,6 +221,10 @@
 **Purpose**: 
 **Key Functionality**:
 
+### `Soft_Skill_Extraction_V10.py`
+**Purpose**: 
+**Key Functionality**:
+
 # result
 
 ### Apr 2011_ Jan 2025
