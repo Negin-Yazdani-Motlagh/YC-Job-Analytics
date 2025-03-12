@@ -9,7 +9,7 @@ from tqdm import tqdm  # For progress bar
 dictionary_file = r"/Users/kriteeneup/Downloads/Dictionary of soft skills (10).xlsx"
 job_posts_file = r"/Users/kriteeneup/Downloads/Feb_Nested_Job_Posts.json"
 
-output_file = r"/Users/kriteeneup/Downloads/New_Negin_once_Headcategory_CountsByDate.json"
+output_file = r"/Users/kriteeneup/Downloads/headcategory_counts_once_per_job_post_v10.json"
 
 # === SORTING HELPERS ===
 month_order = {
@@ -30,15 +30,19 @@ def extract_year_month(date_string):
     return (9999, "ZZZ")
 
 # === LOAD DICTIONARY ===
-print("📚 Loading dictionary...")
+print("Loading dictionary...")
 df = pd.read_excel(dictionary_file)
 
+# === REMOVE ROWS WITH MISSING OR EMPTY HEADCATEGORY ===
+df = df[df['Headcategory'].notna()]
+df = df[df['Headcategory'].astype(str).str.strip() != '']
+
 # === BUILD MAPPING (All 3 Levels) ===
-print("🔎 Mapping subcategory, third-level, and headcategory terms...")
+print("Mapping subcategory, third-level, and headcategory terms...")
 soft_skills_mapping = {}
 
 for _, row in df.iterrows():
-    headcategory = str(row['Headcategory']).strip() if pd.notna(row['Headcategory']) else "Unknown"
+    headcategory = str(row['Headcategory']).strip()
 
     # Subcategory mapping
     sub_skill = str(row['Subcategory']).strip().lower() if pd.notna(row['Subcategory']) else None
@@ -50,12 +54,12 @@ for _, row in df.iterrows():
     if third_level_skill:
         soft_skills_mapping[third_level_skill] = headcategory
 
-    # Optionally include Headcategory itself (if you want to search directly for the headcategory word)
-    headcategory_term = headcategory.strip().lower()
+    # Optionally include Headcategory itself
+    headcategory_term = headcategory.lower()
     if headcategory_term:
         soft_skills_mapping[headcategory_term] = headcategory
 
-print(f"✅ Total unique search terms (all levels): {len(soft_skills_mapping)}")
+print(f"Total unique search terms (all levels): {len(soft_skills_mapping)}")
 
 # === COMPILE REGEX PATTERNS ===
 compiled_patterns = {
@@ -64,7 +68,7 @@ compiled_patterns = {
 }
 
 # === LOAD JOB POSTS ===
-print("🗃️ Loading job posts...")
+print("Loading job posts...")
 with open(job_posts_file, "r", encoding="utf-8") as f:
     job_posts = json.load(f)
 
@@ -76,7 +80,7 @@ def process_date(date, data):
     Process one month worth of job posts, counting one occurrence of each headcategory per job post.
     """
     if "comments" not in data:
-        print(f"⚠️ No comments found for date: {date}")
+        print(f"No comments found for date: {date}")
         return date, {}
 
     headcategory_counts = defaultdict(int)
@@ -91,7 +95,7 @@ def process_date(date, data):
 
         # Search for ANY matching term that maps to headcategory
         for skill, pattern in compiled_patterns.items():
-            if pattern.search(text_lower):  # If we find it in text
+            if pattern.search(text_lower):
                 headcategory = soft_skills_mapping[skill]
                 headcategories_found.add(headcategory)
 
@@ -102,12 +106,12 @@ def process_date(date, data):
     # Store total job posts
     headcategory_counts["Total Job Posts"] = total_job_posts
 
-    print(f"✅ Date: {date} - Job Posts: {total_job_posts} - Categories Found: {dict(headcategory_counts)}")
+    print(f"Date: {date} - Job Posts: {total_job_posts} - Categories Found: {dict(headcategory_counts)}")
 
     return date, dict(headcategory_counts)
 
 # === MAIN PROCESSING LOOP ===
-print("🚀 Starting processing of dates...")
+print("Starting processing of dates...")
 results = []
 for date, data in tqdm(job_posts["YC"].items(), desc="Processing Dates"):
     processed_date, counts = process_date(date, data)
@@ -125,8 +129,8 @@ sorted_dates = OrderedDict(
 result_json = {"HeadcategoryCountsByDate": sorted_dates}
 
 # === SAVE TO FILE ===
-print(f"💾 Saving results to {output_file} ...")
+print(f"Saving results to {output_file} ...")
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(result_json, f, indent=4)
 
-print("✅ JSON generation complete!")
+print("JSON generation complete!")
