@@ -454,3 +454,7 @@ This updated JSON file stores the aggregated counts of soft skills categorized u
 ### `All_Months_headcategories_once_per_job_plot.png`
 **Purpose**: 
 **Key Functionality**:
+
+### `headcategory_count_once_perjobpost_v10.json`
+**Purpose**: 
+**Key Functionality**:
